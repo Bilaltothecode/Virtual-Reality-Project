@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RopeScript : MonoBehaviour
 {
-    private ConfigurableJoint joint;
+    private CharacterJoint joint;
     private GameObject pole;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get Character Joint component
-        joint = GetComponent<ConfigurableJoint>();
+        joint = GetComponent<CharacterJoint>();
 
         // Find the pole
         pole = GameObject.Find("Pole");
@@ -27,13 +27,15 @@ public class RopeScript : MonoBehaviour
         if (prevRope != null)
         {
             joint.connectedBody = prevRope.GetComponent<Rigidbody>();
-            joint.connectedAnchor = new Vector3(0, -0.8f, 0);
+            joint.connectedAnchor = new Vector3(0, -1f, 0);
             return;
         }
 
         // Find the parent pole game object, set it to the connectedBody, and the anchor to the end of the rope
         joint.connectedBody = pole.GetComponent<Rigidbody>();
         joint.connectedAnchor = new Vector3(0, 1, 0);
+
+        joint.transform.eulerAngles = new Vector3(0, 180, 0);
 
     }
 
