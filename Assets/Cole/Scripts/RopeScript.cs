@@ -27,7 +27,8 @@ public class RopeScript : MonoBehaviour
         if (prevRope != null)
         {
             joint.connectedBody = prevRope.GetComponent<Rigidbody>();
-            joint.connectedAnchor = new Vector3(0, -1f, 0);
+            joint.anchor = new Vector3(0, -0.4f, 0);
+
             return;
         }
 
@@ -35,7 +36,7 @@ public class RopeScript : MonoBehaviour
         joint.connectedBody = pole.GetComponent<Rigidbody>();
         joint.connectedAnchor = new Vector3(0, 1, 0);
 
-        joint.transform.eulerAngles = new Vector3(0, 180, 0);
+        joint.transform.eulerAngles = new Vector3(180, 0, 0);
 
     }
 
