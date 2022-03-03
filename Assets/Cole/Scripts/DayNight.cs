@@ -20,6 +20,7 @@ public class DayNight : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("asdasd");
         if (other.gameObject.tag == "Controller")
         {
             if (isDay)
@@ -29,6 +30,8 @@ public class DayNight : MonoBehaviour
                 button.enabled = false;
                 isDay = false;
                 RenderSettings.ambientLight = new Color(0.1f, 0.1f, 0.1f);
+                // Set skybox
+                RenderSettings.skybox = Resources.Load("Assets/Oculus/Interaction/Runtime/Materials/UIUnderlayImposter") as Material;
             }
             else
             {
@@ -37,6 +40,8 @@ public class DayNight : MonoBehaviour
                 button.enabled = true;
                 isDay = true;
                 RenderSettings.ambientLight = new Color(0.8f, 0.8f, 0.8f);
+                // Set skybox
+                RenderSettings.skybox = Resources.Load("Resources/unity_builtin_extras/Default-Skybox") as Material;
             }
         }
     }
