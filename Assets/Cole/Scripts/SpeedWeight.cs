@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// To modify the "weight" of an object, you have to modify its corresponding physic material (materials folder), and its mass(?)
+
 public class SpeedWeight : MonoBehaviour
 {
     private SimpleCapsuleWithStickMovement player;

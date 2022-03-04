@@ -15,7 +15,7 @@ public class FacingLightColour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Use dot product to determine if cameraRig is facing the light
+        // Use dot product to determine if cameraRig is facing the light, thanks for the tip on this Justin.
         if (Vector3.Dot(cameraRig.centerEyeAnchor.forward, transform.forward) > 0)
         {
             GetComponent<Light>().color = Color.green;
