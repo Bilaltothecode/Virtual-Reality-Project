@@ -27,7 +27,7 @@ public class RopeScript : MonoBehaviour
         if (prevRope != null)
         {
             joint.connectedBody = prevRope.GetComponent<Rigidbody>();
-            joint.anchor = new Vector3(0, -0.4f, 0);
+            joint.anchor = new Vector3(0, -0.2f, 0);
 
             return;
         }
