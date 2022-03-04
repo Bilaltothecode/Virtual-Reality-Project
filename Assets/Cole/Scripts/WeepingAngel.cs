@@ -23,8 +23,8 @@ public class WeepingAngel : MonoBehaviour
             // Move object towards cameraRig at rate of speed, and set rotation to face cameraRig horizontally based on cameraRig's forward vector and relative position
             transform.position = Vector3.MoveTowards(transform.position, cameraRig.centerEyeAnchor.position, speed * Time.deltaTime);
             Vector3 lookPos = cameraRig.transform.position - transform.position;
-            lookPos.y = 0;
-            lookPos = -lookPos;
+            lookPos.y = 0; // Keep vertical
+            lookPos = -lookPos; // It was backwards. I added a backside to the quad anyway, but whatever.
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
         }
