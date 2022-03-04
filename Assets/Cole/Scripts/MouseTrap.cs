@@ -6,16 +6,6 @@ public class MouseTrap : MonoBehaviour
 {
     private bool isTriggered = false;
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -24,6 +14,7 @@ public class MouseTrap : MonoBehaviour
             isTriggered = true;
 
             // Make the object a child of this, lock position
+            // TODO let the controller wiggle lol
             other.transform.parent = transform;
             other.transform.localPosition = new Vector3(0, 0, 0);
         }

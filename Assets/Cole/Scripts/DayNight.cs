@@ -20,7 +20,6 @@ public class DayNight : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("asdasd");
         if (other.gameObject.tag == "Controller")
         {
             if (isDay)

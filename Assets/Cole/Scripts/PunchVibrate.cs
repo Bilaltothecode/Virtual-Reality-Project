@@ -29,8 +29,10 @@ public class PunchVibrate : MonoBehaviour
         }
     }
 
+    // Coroutine for short vibration
     IEnumerator Vibrate(OVRInput.Controller controller)
     {
+        // Vibrate with amplitude based on speed. I added ^2 / 2 to try and make the curve a little more logarithmic
         OVRInput.SetControllerVibration(0.5f, Mathf.Min(Mathf.Pow(OVRInput.GetLocalControllerVelocity(controller).magnitude, 2) / 2, 1f), controller);
         yield return new WaitForSeconds(0.1f);
         OVRInput.SetControllerVibration(0f, 0f, controller);
