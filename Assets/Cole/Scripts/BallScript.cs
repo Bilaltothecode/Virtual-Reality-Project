@@ -27,7 +27,7 @@ public class BallScript : MonoBehaviour
         }
 
         // Attach ball to end of rope
-        joint.transform.position = lastRope.transform.position + new Vector3(0, 0, 0);
+        joint.transform.position = lastRope.transform.position + new Vector3(0, 0.3f, 0);
         joint.connectedBody = lastRope.GetComponent<Rigidbody>();
 
     }
