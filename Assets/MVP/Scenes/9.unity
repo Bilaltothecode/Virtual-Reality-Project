@@ -195,41 +195,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &35531851
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!4 &52915210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013889601590, guid: 4d293c8e162f3874b982baadd71153d2,
@@ -449,7 +414,6 @@ GameObject:
   - component: {fileID: 377082598}
   - component: {fileID: 377082597}
   - component: {fileID: 377082600}
-  - component: {fileID: 377082601}
   - component: {fileID: 377082602}
   - component: {fileID: 377082603}
   m_Layer: 0
@@ -555,24 +519,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &377082601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377082595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e113ee9d53cbea4bb1eec05d9237e9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonAnimator: {fileID: 377082600}
-  lightsAnimator: {fileID: 971682996}
-  fadeAnimator: {fileID: 1820512311}
-  switchSound: {fileID: 8300000, guid: 38f13e873d3a8524a91504901e63f1b4, type: 3}
-  buttonSound: {fileID: 8300000, guid: ce18ff31e8eda8d4a844ef9406c9e49e, type: 3}
-  source: {fileID: 377082602}
 --- !u!82 &377082602
 AudioSource:
   m_ObjectHideFlags: 0
@@ -682,10 +628,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   discoParent: {fileID: 639999388}
-  buttonAnimator: {fileID: 0}
-  fadeAnimator: {fileID: 0}
-  buttonSound: {fileID: 0}
-  source: {fileID: 0}
+  buttonAnimator: {fileID: 971682996}
+  fadeAnimator: {fileID: 1820512311}
+  buttonSound: {fileID: 8300000, guid: ce18ff31e8eda8d4a844ef9406c9e49e, type: 3}
+  source: {fileID: 377082602}
 --- !u!1 &379260768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +968,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &610076840
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &639999388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,11 +2442,11 @@ PrefabInstance:
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 35531851}
+      objectReference: {fileID: 610076840}
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1796068195}
+      objectReference: {fileID: 2061305362}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
 --- !u!4 &1116444663 stripped
@@ -2832,7 +2813,13 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!43 &1796068195
+--- !u!95 &1820512311 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4744004716678385525, guid: f5fffa4a254ce2a4c88f4beb55cb565a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4744004717022437186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!43 &2061305362
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2996,12 +2983,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!95 &1820512311 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4744004716678385525, guid: f5fffa4a254ce2a4c88f4beb55cb565a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4744004717022437186}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4744004717022437186
 PrefabInstance:
   m_ObjectHideFlags: 0
