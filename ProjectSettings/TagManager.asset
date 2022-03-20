@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Green
   - Controller
+  - Any
+  - Red
+  - Blue
   layers:
   - Default
   - TransparentFX
