@@ -99,6 +99,6 @@ public class MusicController : MonoBehaviour
         yield return new WaitForSeconds(2);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("8");
+        SceneManager.LoadScene("9");
     }
 }
