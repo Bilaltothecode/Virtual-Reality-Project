@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class Scene5ButtonPress : MonoBehaviour
 {
     [SerializeField]
-    Animator buttonAnimator, hammerAnimator, fadeAnimator;
+    Animator buttonAnimator, fadeAnimator;
     [SerializeField]
     AudioSource source;
     [SerializeField]
     AudioClip buttonSound;
+    [SerializeField]
+    GameObject fadeCanvas, plank;
 
     bool isPressed = false;
 
@@ -24,7 +26,8 @@ public class Scene5ButtonPress : MonoBehaviour
             if (!isPressed)
             {
                 isPressed = true;
-                hammerAnimator.SetTrigger("Swing");
+                GameObject o = Instantiate(plank);
+                o.transform.SetPositionAndRotation(fadeCanvas.transform.parent.position, fadeCanvas.transform.parent.rotation);
                 StartCoroutine(SwitchScene());
             }
         }
