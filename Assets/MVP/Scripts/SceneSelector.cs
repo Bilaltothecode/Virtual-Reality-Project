@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene5ButtonPress : MonoBehaviour
+public class SceneSelector : MonoBehaviour
 {
+    [SerializeField]
+    int startScene = 1;
+    [SerializeField]
+    bool reverseOrder = false;
     [SerializeField]
     Animator buttonAnimator, fadeAnimator;
     [SerializeField]
-    AudioSource source;
-    [SerializeField]
     AudioClip buttonSound;
     [SerializeField]
-    GameObject plank;
-
-    bool isPressed = false;
+    AudioSource source;
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,11 +23,11 @@ public class Scene5ButtonPress : MonoBehaviour
             buttonAnimator.SetBool("Pressed", true);
             source.PlayOneShot(buttonSound);
 
-            if (!isPressed)
+            if (!Flags.orderSet)
             {
-                isPressed = true;
-                GameObject o = Instantiate(plank);
-                o.transform.SetPositionAndRotation(fadeAnimator.transform.parent.parent.position, fadeAnimator.transform.parent.parent.rotation);
+                Flags.SetStartScene(startScene);
+                Flags.reverseSceneOrder = reverseOrder;
+                Flags.orderSet = true;
                 StartCoroutine(SwitchScene());
             }
         }
@@ -44,9 +44,8 @@ public class Scene5ButtonPress : MonoBehaviour
 
     IEnumerator SwitchScene()
     {
-        yield return new WaitForSeconds(5);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(Flags.GetNextScene);
+        SceneManager.LoadScene(startScene.ToString());
     }
 }

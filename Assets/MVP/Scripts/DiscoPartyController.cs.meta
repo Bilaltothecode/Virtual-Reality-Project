@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: ac1fb90fa131f754e9ccdb63b431e21f
+guid: df447ca7fed28e74592c2460dde938b2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - detector: {instanceID: 0}
-  - tmp: {instanceID: 0}
+  - discoParent: {instanceID: 0}
   - plank: {fileID: 6223643499134529265, guid: 55bb9ef016d226e4eaf391178a69289b, type: 3}
+  - buttonAnimator: {instanceID: 0}
   - fadeAnimator: {instanceID: 0}
+  - buttonSound: {instanceID: 0}
+  - source: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
