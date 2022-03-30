@@ -4,7 +4,56 @@ Our study is focused on benchmarking several different sensori-motor contingenci
 
 We've compiled an MVP of some of the scenes we developed/tested in our study, which you can download and run on an Oculus Quest HMD.
 
+## Research Study
+
+Due to concerns with the Labour Board, we are currently unable to recruit willing test subjects within our allocated timeframe. Our study will proceed exclusively through evaluation of team members **only**.
+
+*However*, the research effort is not fruitless; follow the steps below and submit your tests results to our [Google Forms page](http://todo.com).
+
+### What you'll need
+- Oculus HMD + controllers (see installation steps [below](#installation))
+- An evaluator (you)
+- A willing test subject
+
+<br />
+
+### Method
+
+There are twenty scenes available to choose from, each accessible from the main menu. Each tests includes a Duck Test that will occur at some point throughout the experience.
+1. Pick a scene, and have the subject enter that scene.
+1. Carefully observe the subject, wait for the Duck Test to occur, record the intensity of their reaction (see [Evaluation](#evaluation)).
+1. Repeat five times.
+1. Ask the subject to evaluate their overall presence throughout the experience (see [Auto-Evaluation](#auto-evaluation)).
+1. Submit your results in the [Google Forms page](http://todo.com).
+
+> Remember, single results may introduce entropy to the overall dataset. Please try and submit results for more than one scene!
+
 ---
+
+#### Evaluation
+Rate the subjects' physical and audible reaction from 1-5 
+1. No discernable reaction
+2. Slight reaction, either not sudden or very minor
+3. Definite reaction, slight audible reaction
+4. Subject continues to respond after the initial reaction
+5. *Falls out of chair, removes HMD, etc*
+
+---
+
+#### Auto-Evaluation
+Have the subject describe their sense of "being there" from 1-7 ([taken from](http://www-dept.cs.ucl.ac.uk/staff/M.Slater/Papers/questionnaire-paper.pdf)):
+1. Not at all
+
+.
+.
+.
+
+7. Very much
+
+<br />
+
+## Installation
+
 ### What you'll need
 
 - Oculus Developer account
@@ -13,12 +62,14 @@ We've compiled an MVP of some of the scenes we developed/tested in our study, wh
 
 > This project may work on other devices, with the appropriate setup.
 
-## Running in Unity
+<br />
+
+### Running in Unity
 Clone the repository using:
 ```
 git clone https://github.com/typeou
 ```
-–or download the project as a `.zip` and extract it.
+– or download the project as a `.zip` and extract it.
 <br /><br />
 
 In Unity Hub, select the dropdown next to open, and select `Add project from disk`.
@@ -32,7 +83,9 @@ Open the project using Unity version 2020.3.28f1. Open `File -> Build Settings`.
 
 Make sure your Headset is connected (you should see it under `Run Device` in the Build Settings window. Hit `Build And Run`, and the project should start running on your HMD.
 
-## Running via SideQuest
+<br />
+
+### Running Natively
 
 #### Prebuilt Binary
 A prebuilt `.apk` file can be downloaded from the [Releases](https://github.com/typeou/458/releases) section.
@@ -44,7 +97,7 @@ Follow the [steps for Running in Unity](#running-in-unity). Instead of clicking 
 
 ---
 
-### Uploading Via SideQuest
+#### Uploading Via SideQuest
 Launch SideQuest and make sure that your Quest HMD is detected. On the top right, click the `Install APK file from folder on computer` button, and upload the aforementioned `.apk` file.
 
 ![where to upload .apk in SideQuest](./img/sidequest.png)
