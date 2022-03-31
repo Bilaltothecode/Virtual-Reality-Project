@@ -44,7 +44,7 @@ public class Scene10PassthroughFader : MonoBehaviour
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1);
         if (ovrManager != null)
-            ovrManager.isInsightPassthroughEnabled = !ovrManager.isInsightPassthroughEnabled;
+            FindObjectOfType<OVRPassthroughLayer>().hidden = !FindObjectOfType<OVRPassthroughLayer>().hidden;
         room.SetActive(!room.activeSelf);
         fadeAnimator.SetBool("Faded", false);
         yield return new WaitForSeconds(1);
