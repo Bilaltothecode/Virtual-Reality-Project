@@ -18,6 +18,7 @@ public class Scene6PassthroughFader : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<OVRPassthroughLayer>().hidden = true;
         centerEye = GameObject.Find("CenterEyeAnchor");
         if (centerEye != null)
             ovrManager = centerEye.GetComponentInParent<OVRManager>();
@@ -46,7 +47,7 @@ public class Scene6PassthroughFader : MonoBehaviour
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1);
         if (ovrManager != null)
-            ovrManager.isInsightPassthroughEnabled = !ovrManager.isInsightPassthroughEnabled;
+            FindObjectOfType<OVRPassthroughLayer>().hidden = !FindObjectOfType<OVRPassthroughLayer>().hidden;
         room.SetActive(!room.activeSelf);
         realityText.SetActive(!realityText.activeSelf);
         fadeAnimator.SetBool("Faded", false);
