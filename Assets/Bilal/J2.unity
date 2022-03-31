@@ -364,7 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxInteractors: -1
   _maxSelectingInteractors: -1
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 1496482141}
   _releaseDistance: 0
   _physicsObject: {fileID: 0}
 --- !u!114 &715275253
