@@ -8,7 +8,7 @@ We've compiled an MVP of some of the scenes we developed/tested in our study, wh
 
 Due to concerns with the Labour Board, we are currently unable to recruit willing test subjects within our allocated timeframe. Our study will proceed exclusively through evaluation of team members **only**.
 
-*However*, the research effort is not fruitless; follow the steps below and submit your tests results to our [Google Forms page](http://todo.com).
+*However*, the research effort is not fruitless; follow the steps below and submit your tests results to our [Google Forms page](https://docs.google.com/forms/d/e/1FAIpQLSeGxzlj9T6sS7Eb-iBv1fx6SXkXbc7LtC5ZNrD4rht7bdKMqw/viewform).
 
 ### What you'll need
 - Oculus HMD + controllers (see installation steps [below](#installation))
@@ -20,11 +20,14 @@ Due to concerns with the Labour Board, we are currently unable to recruit willin
 ### Method
 
 There are twenty scenes available to choose from, each accessible from the main menu. Each tests includes a Duck Test that will occur at some point throughout the experience.
+1. Open the [Google Forms page](https://docs.google.com/forms/d/e/1FAIpQLSeGxzlj9T6sS7Eb-iBv1fx6SXkXbc7LtC5ZNrD4rht7bdKMqw/viewform).
 1. Pick a scene, and have the subject enter that scene.
 1. Carefully observe the subject, wait for the Duck Test to occur, record the intensity of their reaction (see [Evaluation](#evaluation)).
-1. Repeat five times.
 1. Ask the subject to evaluate their overall presence throughout the experience (see [Auto-Evaluation](#auto-evaluation)).
-1. Submit your results in the [Google Forms page](http://todo.com).
+1. Repeat five times, *making sure* to record both results for each attempt.
+1. Submit your results in the [Google Forms page](https://docs.google.com/forms/d/e/1FAIpQLSeGxzlj9T6sS7Eb-iBv1fx6SXkXbc7LtC5ZNrD4rht7bdKMqw/viewform).
+
+We are exclusively researching the 1st and 5th attempts in our study, in order to get an unbiased result, as well as a consistent result (for control).
 
 > Remember, single results may introduce entropy to the overall dataset. Please try and submit results for more than one scene!
 
@@ -41,14 +44,10 @@ Rate the subjects' physical and audible reaction from 1-5
 ---
 
 #### Auto-Evaluation
-Have the subject describe their sense of "being there" from 1-7 ([taken from](http://www-dept.cs.ucl.ac.uk/staff/M.Slater/Papers/questionnaire-paper.pdf)):
-1. Not at all
-
-.
-.
-.
-
-7. Very much
+Have the subject describe their sense of "being there" from 1-3:
+1. "Nothing"
+1. "Something"
+1. "Good"
 
 <br />
 
