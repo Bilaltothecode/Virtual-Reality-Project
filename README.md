@@ -57,7 +57,7 @@ Have the subject describe their sense of "being there" from 1-3:
 
 - Oculus Developer account
 - Oculus HMD ([dev mode](https://www.youtube.com/watch?v=jB1gwgSpU3E)) + controllers
-- A computer with either Unity or SideQuest installed
+- A computer with either Unity or SideQuest installed, as well as Blender (?)
 
 > This project may work on other devices, with the appropriate setup.
 
@@ -93,6 +93,8 @@ A prebuilt `.apk` file can be downloaded from the [Releases](https://github.com/
 
 #### Building From Source
 Follow the [steps for Running in Unity](#running-in-unity). Instead of clicking `Build And Run`, hit `Build`, and save the `.apk` onto your computer. Proceed to the next steps.
+
+> It's worth noting that many of the scenes included in the source are unfinished, and should not be included in evaluation.
 
 ---
 
