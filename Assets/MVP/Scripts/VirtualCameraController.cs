@@ -2,40 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
 
 public class VirtualCameraController : MonoBehaviour
 {
     public Camera cameraCamera;
-    public PostProcessVolume dofVolume, shutterSpeedVolume, isoVolume;
     public RenderTexture renderTexture;
     public GameObject photo;
-
-    public TextMeshPro dofText, blurText, isoText, zoomText;
-
-    public void AdjustFStop(bool up)
-    {
-        dofVolume.weight = Mathf.Clamp(dofVolume.weight + (up ? 0.1f : -0.1f), 0, 1);
-        dofText.text = "FStop: " + dofVolume.weight.ToString();
-    }
-
-    public void AdjustShutterSpeed(bool up)
-    {
-        shutterSpeedVolume.weight = Mathf.Clamp(shutterSpeedVolume.weight + (up ? 0.1f : -0.1f), 0, 1);
-        blurText.text = "Shutter: " + shutterSpeedVolume.weight.ToString();
-    }
-
-    public void AdjustISO(bool up)
-    {
-        isoVolume.weight = Mathf.Clamp(isoVolume.weight + (up ? 0.1f : -0.1f), 0, 1);
-        isoText.text = "ISO: " + isoVolume.weight.ToString();
-    }
-
-    public void Zoom(bool up)
-    {
-        cameraCamera.fieldOfView = Mathf.Clamp(cameraCamera.fieldOfView + (up ? -10 : 10), 10, 90);
-        zoomText.text = "FOV: " + cameraCamera.fieldOfView.ToString();
-    }
 
     public void TakePicture()
     {
