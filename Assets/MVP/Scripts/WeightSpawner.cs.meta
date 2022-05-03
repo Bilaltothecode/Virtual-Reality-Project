@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: c74412005b94ce6479a4cc94d294b793
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - white1: {fileID: 237583279879970269, guid: 92dc8d26fc1e6f749ab771c3fcccc10b, type: 3}
+  - white2: {fileID: 9066876866624037639, guid: c059db825eb9b754a86a6dda29645bd8,
+      type: 3}
+  - white3: {fileID: 8662363387038348917, guid: 5db7b859029cffd43b6a410f6622f3df,
+      type: 3}
+  - red1: {fileID: 370290356826641788, guid: ea767eeb0d784e94ebd85960e3ce8711, type: 3}
+  - red2: {fileID: 8374341796581778867, guid: ec6f33e79883c6a4fa90710d85fc4f5c, type: 3}
+  - red3: {fileID: 6149640369431085285, guid: 041c4d54ed16fa840bea3959b9d36e34, type: 3}
+  - green1: {fileID: 8278757367646951762, guid: ed7c8ceedc848e048a562f84e68058fc,
+      type: 3}
+  - green2: {fileID: 389024832859388052, guid: 72b59be4b32847148a208644b1dba918, type: 3}
+  - green3: {fileID: 8549069713517575239, guid: 593bb7a795a46a24a8c29fcd84511b52,
+      type: 3}
+  - blue1: {fileID: 3301539498185731758, guid: b8efd3257c7ff7e41b2afdc8578352d3, type: 3}
+  - blue2: {fileID: 9140058253611085095, guid: e0ce9e7f794f95049aaf64394b08a3cc, type: 3}
+  - blue3: {fileID: 6440189664299827523, guid: b6e8fe50374d56447bca071071e5bfea, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
