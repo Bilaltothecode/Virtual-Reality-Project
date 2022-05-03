@@ -66,7 +66,7 @@ Have the subject describe their sense of "being there" from 1-3:
 ### Running in Unity
 Clone the repository using:
 ```
-git clone https://github.com/typeou
+git clone https://github.com/Mexican-Man/458
 ```
 – or download the project as a `.zip` and extract it.
 <br /><br />
@@ -87,7 +87,7 @@ Make sure your Headset is connected (you should see it under `Run Device` in the
 ### Running Natively
 
 #### Prebuilt Binary
-A prebuilt `.apk` file can be downloaded from the [Releases](https://github.com/typeou/458/releases) section.
+A prebuilt `.apk` file can be downloaded from the [Releases](https://github.com/Mexican-Man/458/releases) section.
 
 ---
 
