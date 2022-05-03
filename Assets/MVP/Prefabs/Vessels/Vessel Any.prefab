@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalWeight: 0
+  acceptedColours: 0
   confirmSound: {fileID: 8300000, guid: bc37ac7a24d142a4d89037fac329183b, type: 3}
   source: {fileID: 4776322851970575147}
 --- !u!82 &4776322851970575147
@@ -224,6 +225,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e848051a6d15d0d43a3397655a440c83, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 80d56e82cc705cc4098a4b9a551389dd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: d51248d48dbbedf4587e1feed5e70a42, type: 2}
     - target: {fileID: 919132149155446097, guid: 80d56e82cc705cc4098a4b9a551389dd,
         type: 3}
       propertyPath: m_Name
