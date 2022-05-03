@@ -6,7 +6,7 @@ public static class Flags
 {
     private static int startScene = 0;
     public static int scene = 0;
-    public static int numScenes = 10;
+    public static int numScenes = 20;
     public static bool reverseSceneOrder = false;
     public static bool orderSet = false;
 
