@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class FallDetector : MonoBehaviour
 {
     [SerializeField]
+    GameObject plank;
+    [SerializeField]
     Animator fadeAnimator;
 
     bool fell = false;
@@ -21,9 +23,12 @@ public class FallDetector : MonoBehaviour
 
     IEnumerator SwitchScene()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
+        GameObject o = Instantiate(plank);
+        o.transform.SetPositionAndRotation(fadeAnimator.transform.parent.parent.position, fadeAnimator.transform.parent.parent.rotation);
+        yield return new WaitForSeconds(1);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("8");
+        SceneManager.LoadScene(Flags.GetNextScene);
     }
 }
