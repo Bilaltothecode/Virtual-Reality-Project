@@ -19,22 +19,23 @@ public class Scene6PassthroughFader : MonoBehaviour
         centerEye = GameObject.Find("CenterEyeAnchor");
         if (centerEye != null)
             ovrManager = centerEye.GetComponentInParent<OVRManager>();
+        else
+            centerEye = fadeAnimator.transform.parent.parent.gameObject;
     }
 
     void Update()
     {
-        if (centerEye != null)
-            TogglePassthrough();
+        TogglePassthrough();
     }
 
     public void TogglePassthrough()
     {
-        if (!switched && Vector3.Distance(transform.position, centerEye.transform.position) < 0.1f)
+        if (!switched && Vector3.Distance(transform.position, centerEye.transform.position) < 0.15f)
         {
             StartCoroutine(WaitFade());
             switched = true;
         }
-        else if (switched && Vector3.Distance(transform.position, centerEye.transform.position) > 0.1f)
+        else if (switched && Vector3.Distance(transform.position, centerEye.transform.position) > 0.15f)
             switched = false;
     }
 
@@ -42,9 +43,10 @@ public class Scene6PassthroughFader : MonoBehaviour
     {
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1);
-        ovrManager.isInsightPassthroughEnabled = !ovrManager.isInsightPassthroughEnabled;
-        realityText.SetActive(true);
-        room.SetActive(false);
+        if (ovrManager != null)
+            ovrManager.isInsightPassthroughEnabled = !ovrManager.isInsightPassthroughEnabled;
+        room.SetActive(!room.activeSelf);
+        realityText.SetActive(!realityText.activeSelf);
         fadeAnimator.SetBool("Faded", false);
         yield return new WaitForSeconds(6);
         fadeAnimator.SetBool("Faded", true);
