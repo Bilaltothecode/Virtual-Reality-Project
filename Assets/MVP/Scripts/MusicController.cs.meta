@@ -3,7 +3,17 @@ guid: e9af625d06e61b349b0c15d31afec248
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - plank: {fileID: 6223643499134529265, guid: 55bb9ef016d226e4eaf391178a69289b, type: 3}
+  - source: {instanceID: 0}
+  - tone1: {instanceID: 0}
+  - tone2: {instanceID: 0}
+  - tone3: {instanceID: 0}
+  - musicBoxAnimator: {instanceID: 0}
+  - fadeAnimator: {instanceID: 0}
+  - white: {instanceID: 0}
+  - green: {instanceID: 0}
+  - red: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

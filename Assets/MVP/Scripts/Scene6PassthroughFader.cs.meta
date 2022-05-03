@@ -3,7 +3,11 @@ guid: ed76ff5aac4e01f41b4d369efb936ccd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - plank: {fileID: 6223643499134529265, guid: 55bb9ef016d226e4eaf391178a69289b, type: 3}
+  - fadeAnimator: {instanceID: 0}
+  - realityText: {instanceID: 0}
+  - room: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

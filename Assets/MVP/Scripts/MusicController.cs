@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MusicController : MonoBehaviour
 {
     [SerializeField]
+    GameObject plank;
+    [SerializeField]
     GameObject[] buttons;
     [SerializeField]
     AudioSource source;
@@ -96,9 +98,12 @@ public class MusicController : MonoBehaviour
             buttons[i].GetComponent<MeshRenderer>().material = green;
         yield return new WaitForSeconds(1);
         musicBoxAnimator.SetBool("Hide", true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        GameObject o = Instantiate(plank);
+        o.transform.SetPositionAndRotation(fadeAnimator.transform.parent.parent.position, fadeAnimator.transform.parent.parent.rotation);
+        yield return new WaitForSeconds(1);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("9");
+        SceneManager.LoadScene(Flags.GetNextScene);
     }
 }

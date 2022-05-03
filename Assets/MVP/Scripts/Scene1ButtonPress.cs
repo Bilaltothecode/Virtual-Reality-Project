@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Scene1ButtonPress : MonoBehaviour
 {
     [SerializeField]
+    GameObject plank;
+    [SerializeField]
     Animator buttonAnimator, lightsAnimator, fadeAnimator;
     [SerializeField]
     AudioClip switchSound, buttonSound;
@@ -42,9 +44,12 @@ public class Scene1ButtonPress : MonoBehaviour
 
     IEnumerator SwitchScene()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(5);
+        GameObject o = Instantiate(plank);
+        o.transform.SetPositionAndRotation(fadeAnimator.transform.parent.parent.position, fadeAnimator.transform.parent.parent.rotation);
+        yield return new WaitForSeconds(3);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("2");
+        SceneManager.LoadScene(Flags.GetNextScene);
     }
 }

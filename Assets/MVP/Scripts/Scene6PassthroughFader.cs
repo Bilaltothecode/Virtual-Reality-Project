@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Scene6PassthroughFader : MonoBehaviour
 {
     [SerializeField]
+    GameObject plank;
+    [SerializeField]
     Animator fadeAnimator;
     [SerializeField]
     GameObject realityText, room;
@@ -48,9 +50,12 @@ public class Scene6PassthroughFader : MonoBehaviour
         room.SetActive(!room.activeSelf);
         realityText.SetActive(!realityText.activeSelf);
         fadeAnimator.SetBool("Faded", false);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(3);
+        GameObject o = Instantiate(plank);
+        o.transform.SetPositionAndRotation(fadeAnimator.transform.parent.parent.position, fadeAnimator.transform.parent.parent.rotation);
+        yield return new WaitForSeconds(3);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("7");
+        SceneManager.LoadScene(Flags.GetNextScene);
     }
 }

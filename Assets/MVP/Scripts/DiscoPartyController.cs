@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DiscoPartyController : MonoBehaviour
 {
     [SerializeField]
-    GameObject discoParent;
+    GameObject discoParent, plank;
     [SerializeField]
     Animator buttonAnimator, fadeAnimator;
     [SerializeField]
@@ -38,9 +38,11 @@ public class DiscoPartyController : MonoBehaviour
 
     IEnumerator SwitchScene()
     {
+        GameObject o = Instantiate(plank);
+        o.transform.SetPositionAndRotation(fadeAnimator.transform.parent.parent.position, fadeAnimator.transform.parent.parent.rotation);
         yield return new WaitForSeconds(1);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("10");
+        SceneManager.LoadScene(Flags.GetNextScene);
     }
 }

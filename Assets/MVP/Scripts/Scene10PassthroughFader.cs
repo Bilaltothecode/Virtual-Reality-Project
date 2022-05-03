@@ -53,6 +53,6 @@ public class Scene10PassthroughFader : MonoBehaviour
         yield return new WaitForSeconds(5);
         fadeAnimator.SetBool("Faded", true);
         yield return new WaitForSeconds(1.5f);
-        Application.Quit();
+        SceneManager.LoadScene(Flags.GetNextScene);
     }
 }
